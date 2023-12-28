@@ -37,3 +37,9 @@ If a value can be used for something **other than the animation's name**, it's a
 An animation is basically a series of **keyframes**, of **steps** and you can gave any number of those.
 
 **Transitions** can only have **2 steps**: start and end. Nothing in between.
+
+### Looping
+
+Animations support **looping**. Meaning it can be run once, twice, 10 times or **continuously**.
+
+**Transitions** on the other hand run **just once**.
