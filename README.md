@@ -21,3 +21,11 @@ Motion design is a creative discipline that uses **animation** and **visual effe
 A CSS **animation** is a way to make elements **gradually change** their appearance or position over time.
 
 It's done by defining **keyframes**, which are the in-between states of this change. The animation is then created by smoothly **transitioning** beetween these keyframes.
+
+### Is the order important?
+
+The order of time values is important! The **first** one that can be parsed as a time value is assigned to the *animation-duration*, and the **second** one is assigned to the *animation-delay*.
+
+### It's important to keep in mind
+
+If a value can be used for something **other than the animation's name**, it's applied to that property first.
