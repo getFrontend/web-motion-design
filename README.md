@@ -43,3 +43,9 @@ An animation is basically a series of **keyframes**, of **steps** and you can ga
 Animations support **looping**. Meaning it can be run once, twice, 10 times or **continuously**.
 
 **Transitions** on the other hand run **just once**.
+
+### Direction
+
+You see, **transitions** have a **fixed direction**, meaning they go one way.
+
+Animations can go **forward, in reverse** and they can even **alternate** between the two.
