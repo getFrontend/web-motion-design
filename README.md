@@ -49,3 +49,7 @@ Animations support **looping**. Meaning it can be run once, twice, 10 times or *
 You see, **transitions** have a **fixed direction**, meaning they go one way.
 
 Animations can go **forward, in reverse** and they can even **alternate** between the two.
+
+### Play State
+
+An animation can be **paused**. Transitions cannot. Once a transition starts, it runs to the end. But an animation can be paused or resumed at any point.
