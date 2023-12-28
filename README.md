@@ -8,7 +8,9 @@ This will help bring websites to life and make them more interesting and memorab
 
 Motion design is a creative discipline that uses **animation** and **visual effects** to bring statuc elements to life. It involves manipulating visual elements like **text**, **illustations** and **images** to create engaging and dynamic **motion graphics**.
 
-## Remember
+## CSS transitions
+
+Remember that:
 
 * Not all CSS properties support transitions, like for example **background**. However, there are workarounds, one of which being the use of **pseudo-elements**.
 
@@ -29,3 +31,9 @@ The order of time values is important! The **first** one that can be parsed as a
 ### It's important to keep in mind
 
 If a value can be used for something **other than the animation's name**, it's applied to that property first.
+
+## Difference between animations & transitions
+
+An animation is basically a series of **keyframes**, of **steps** and you can gave any number of those.
+
+**Transitions** can only have **2 steps**: start and end. Nothing in between.
