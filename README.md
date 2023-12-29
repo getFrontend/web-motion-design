@@ -57,3 +57,11 @@ An animation can be **paused**. Transitions cannot. Once a transition starts, it
 ## Loading animations
 
 **Loading animations** have the task of keeping users **informed** and sometimes showing the **progress** of a certain action.
+
+Most of the time these animations will be used as website **preloaders**. However, they can be used in other parts of the UI, like for example in a button.
+
+You can easily create simple **spinners** by making certain **borders** transparent and then using a *rotate* or *scale* transform.
+
+To display a loading animation while a page is loading, add an **event listener** for the **load** event in JavaScript. Once that kicks in, hide you loader and display the page content.
+
+When creating a loading animation that has **multiple elements**, consider adding a different **animation-delay** to each element for a unique movement pattern.
