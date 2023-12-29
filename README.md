@@ -53,3 +53,7 @@ Animations can go **forward, in reverse** and they can even **alternate** betwee
 ### Play State
 
 An animation can be **paused**. Transitions cannot. Once a transition starts, it runs to the end. But an animation can be paused or resumed at any point.
+
+## Loading animations
+
+**Loading animations** have the task of keeping users **informed** and sometimes showing the **progress** of a certain action.
