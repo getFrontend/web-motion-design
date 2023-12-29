@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,8 @@
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700&display=swap"
+		rel="stylesheet">
 
 	<style>
 		:root {
@@ -43,8 +45,9 @@
 		}
 
 		img {
+			margin: 0 auto;
 			display: block;
-			max-width: 100%;
+			max-width: 60%;
 			height: auto;
 		}
 
@@ -96,7 +99,7 @@
 			width: 100%;
 		}
 
-		form > div {
+		form>div {
 			position: relative;
 			margin-bottom: 2rem;
 		}
@@ -123,8 +126,8 @@
 			border-color: var(--gray-base);
 		}
 
-		input:focus + label,
-		input:valid + label {
+		input:focus+label,
+		input:valid+label {
 			transform: translateY(-1.25rem);
 			font-size: .8125rem;
 			color: var(--gray-base);
@@ -167,8 +170,65 @@
 		}
 
 		/* Air */
+		.button {
+			display: flex;
+			place-content: center;
+			min-height: 3.5rem;
+		}
+
+		.button--loader {
+			display: flex;
+			gap: .25rem;
+			align-self: center;
+			display: none;
+		}
+
+		.button--loader > div {
+			width: .8rem;
+			height: .8rem;
+			border-radius: 50%;
+			background-color: white;
+			animation: 1.2s infinite ease-in-out scaleUp;
+		}
+
+		.button--loader div:nth-child(1) {
+			animation-delay: -0.32s;
+		}
+
+		.button--loader div:nth-child(2) {
+			animation-delay: -0.16s;
+		}
+
+		.button.loading .button--text {
+			display: none;
+		}
+
+		.button.loading .button--loader {
+			display: flex;
+		}
+
+		.button.success {
+			background-color: var(--contextual-success-base);
+			pointer-events: none;
+		}
+
+		.button.loading {
+			cursor: wait;
+		}
+
+		@keyframes scaleUp {
+			0%,
+			80%,
+			100% {
+				transform: scale(0);
+			}
+			40% {
+				transform: scale(1);
+			}
+		}
 	</style>
 </head>
+
 <body>
 	<div class="container">
 		<div class="well">
@@ -205,7 +265,7 @@
 				</button>
 			</form>
 
-			<p>Don't have an account? <a href="#">Sign Up</a>.</p>
+			<p>Don't have an account? <a href="!#">Sign Up</a>.</p>
 		</div>
 
 		<img src="illustrations/captain@c.svg" alt="Captain">
@@ -217,7 +277,18 @@
 
 		submitButton.addEventListener('click', (e) => {
 			// Air
+			e.preventDefault();
+
+			submitButton.classList.add('loading');
+
+			setTimeout(() => {
+				submitButton.classList.remove('loading');
+				submitButton.classList.add('success');
+
+				submitButton.innerHTML = 'Login Successful!'
+			}, 4000);
 		})
 	</script>
 </body>
+
 </html>
